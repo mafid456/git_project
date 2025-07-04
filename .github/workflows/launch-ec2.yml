@@ -1,7 +1,7 @@
 name: Launch EC2 Instance
 
 on:
-  workflow_dispatch:  # allows manual trigger
+  workflow_dispatch:  # Allows manual trigger
 
 jobs:
   launch-instance:
@@ -21,8 +21,9 @@ jobs:
     - name: Launch EC2 Instance
       run: |
         aws ec2 run-instances \
-          --image-id ami-020cba7c55df1f615 \         # ✅ Replace with your desired AMI ID
+          --image-id ami-020cba7c55df1f615 \
           --instance-type t2.micro \
-          --key-name vv \                   # ✅ Replace with your key pair name
-          --security-groups my-security-group \      # ✅ Replace with your security group
-          --count 1
+          --key-name vv \
+          --security-groups my-security-group \
+          --count 1 \
+          --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=GitHub-Launch-Instance}]'
