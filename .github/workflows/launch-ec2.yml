@@ -24,6 +24,5 @@ jobs:
           --image-id ami-0f918f7e67a3323f0 \
           --instance-type t2.micro \
           --key-name vv \
-          --security-group-ids sg-0123456789abcdef0 \
           --associate-public-ip-address \
           --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=GitHub-Launch-Instance}]'
