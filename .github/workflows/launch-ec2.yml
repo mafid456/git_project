@@ -21,8 +21,8 @@ jobs:
     - name: Launch EC2 Instance
       run: |
         aws ec2 run-instances \
-          --image-id ami-0abcdef1234567890 \         # ✅ Replace with your desired AMI ID
+          --image-id ami-020cba7c55df1f615 \         # ✅ Replace with your desired AMI ID
           --instance-type t2.micro \
-          --key-name my-key-pair \                   # ✅ Replace with your key pair name
+          --key-name vv \                   # ✅ Replace with your key pair name
           --security-groups my-security-group \      # ✅ Replace with your security group
           --count 1
