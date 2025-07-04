@@ -25,4 +25,4 @@ jobs:
           --instance-type t2.micro \
           --key-name vv \
           --associate-public-ip-address \
-          --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=GitHub-Launch-Instance}]'
+          --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=mafid}]'
