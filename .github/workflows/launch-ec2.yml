@@ -25,7 +25,5 @@ jobs:
           --instance-type t2.micro \
           --key-name vv \
           --security-group-ids sg-0123456789abcdef0 \
-          --subnet-id subnet-0123456789abcdef0 \
-          --count 1 \
           --associate-public-ip-address \
           --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=GitHub-Launch-Instance}]'
